@@ -1,0 +1,6 @@
+# Jetbrain PhpStorm
+.idea/
+# upload folder
+upload/
+# config file
+.htconfig.php

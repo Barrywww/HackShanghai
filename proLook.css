@@ -1,0 +1,317 @@
+/*回到顶部按钮*/
+.ui.circular.icon.button.n-home {
+    position: fixed;
+    /* 1rem <--> -5rem */
+    right: -5rem;
+    bottom: 2rem;
+    z-index: 10;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+/*主页背景*/
+section {
+    height: 100%;
+    position: relative;
+}
+
+.overlay {
+    background-image: url('image/background.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+}
+
+/*主页语言切换按钮*/
+.very.compact.very.basic.right.floated.inverted.button {
+    margin-top: 4% !important;
+    margin-right: 4% !important;
+    position: absolute;
+    right: 0;
+}
+
+/*主页logo*/
+.c-main-logo {
+    width: 60% !important;
+    opacity: 0;
+}
+
+/*主页简介*/
+.c-main-description {
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    opacity: 0;
+}
+
+/*主页向下滚动动画图标*/
+@-webkit-keyframes scroll-led {
+    0% {
+        opacity: 0;
+        margin-top: 0;
+    }
+
+    50% {
+        opacity: 0.65;
+    }
+
+    100% {
+        opacity: 0;
+        margin-top: 1.5rem;
+    }
+
+}
+
+div.c-scroll-animation {
+    position: absolute;
+    bottom: 0;
+    height: 5rem;
+    width: 100%;
+    text-align: center;
+}
+
+i.c-scroll-animation {
+    -webkit-animation-name: scroll-led;
+    -webkit-animation-duration: 2.2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-delay: 0.4s;
+}
+
+
+/*主菜单*/
+.borderless.menu {
+    background-color: rgba(27, 27, 27, 0) !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    transition: box-shadow 0.5s ease, padding 0.5s ease, background-color 0.5s ease;
+    opacity: 0;
+    z-index: 200 !important;
+}
+
+.borderless.menu.fixed {
+    background-color: #ffffff !important;
+    border: 1px solid #ddd !important;
+    box-shadow: 0 5px 5px rgba(120, 120, 120, 0.2) !important;
+    z-index: 200 !important;
+}
+
+/*主菜单项目*/
+.borderless.menu .c-mobile-only,
+.borderless.menu .c-desktop-only {
+    color: #ffffff !important;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+.borderless.menu .c-mobile-only:hover,
+.borderless.menu .c-desktop-only:hover {
+    background: rgba(249, 249, 249, 0.31) !important;
+    color: #ffffff !important;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+.borderless.menu.fixed .c-mobile-only,
+.borderless.menu.fixed .c-desktop-only {
+    color: #000000 !important;
+}
+
+.borderless.menu.fixed .c-mobile-only:hover,
+.borderless.menu.fixed .c-desktop-only:hover {
+    background: #d1d1d1 !important;
+    color: #000000 !important;
+}
+
+/*主菜单仅显示电脑版项目*/
+.borderless.menu .c-mobile-only {
+    display: none !important;
+}
+
+.borderless.menu .c-desktop-only {
+    display: block !important;
+    padding-top: 19px !important;
+}
+
+/*侧边菜单logo*/
+.c-sidebar-logo {
+    width: 75% !important;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+/*正文通用组件*/
+h1.ui.horizontal.divider.header {
+    margin-top: 7rem !important;
+}
+
+.ui.justified.container,
+.ui.center.aligned.container {
+    margin-top: 3rem !important;
+}
+
+h2.ui.header {
+    margin-top: 4rem !important;
+}
+
+.ui.styled.accordion {
+    margin-top: 1rem;
+}
+
+.ui.stackable.grid.container .ui.statistic {
+    margin-top: 1rem;
+}
+
+.ui.statistic .label {
+    margin-top: 1rem !important;
+}
+
+/*文末留空*/
+.c-vertical-padding {
+    height: 10rem;
+}
+
+/*团队介绍*/
+.c-avatar img {
+    width: 120px;
+}
+
+.c-name {
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.c-position {
+    margin-top: 0.3rem;
+}
+
+/*自适应头像数量*/
+.ui.stackable.grid.container.c-avatars .column {
+    width: 25% !important;
+}
+
+/*赞助商logo*/
+.c-sponsor-logo {
+    max-height: 120px;
+    max-width: 400px;
+}
+
+/*页脚*/
+.c-footer {
+    padding: 3rem 2rem 1rem;
+}
+
+.c-footer-logo {
+    width: 200px;
+}
+
+.c-footer-qrcode {
+    width: 150px;
+}
+
+/*手机版*/
+@media only screen and (max-width: 768px) {
+    /*主页语言切换按钮*/
+    .very.compact.very.basic.right.floated.inverted.button {
+        margin-right: 2% !important;
+    }
+
+    /*主页logo*/
+    .c-main-logo {
+        width: 80% !important;
+    }
+
+    /*侧栏菜单按钮修复*/
+    .borderless.menu .c-sidebar-toggle {
+        margin-left: 0.8rem;
+    }
+
+    /*主页向下滚动动画图标*/
+    @-webkit-keyframes scroll-led {
+        0% {
+            opacity: 0;
+            margin-top: 0;
+        }
+
+        50% {
+            opacity: 0.8;
+        }
+
+        100% {
+            opacity: 0;
+            margin-top: 2.5rem;
+        }
+    }
+
+    div.c-scroll-animation {
+        height: 8rem;
+    }
+
+    /*主菜单仅显示手机版项目*/
+    .borderless.menu .c-desktop-only {
+        display: none !important;
+    }
+
+    .borderless.menu .c-mobile-only {
+        display: block !important;
+        padding-top: 19px !important;
+    }
+
+    /*文末留空*/
+    .c-vertical-padding {
+        margin-top: 6rem;
+        height: 0;
+    }
+
+    /*团队介绍*/
+    .c-avatar img {
+        width: 80px;
+    }
+
+    .c-name {
+        margin-top: 0.3rem;
+    }
+
+    .c-position {
+        margin-top: 0.1rem;
+    }
+
+    /*自适应头像数量*/
+    .ui.stackable.grid.container.c-avatars .column {
+        width: 50% !important;
+    }
+
+    /*赞助商logo*/
+    .c-sponsor-logo {
+        max-height: 100px;
+        max-width: 200px;
+    }
+
+    /*页脚*/
+    .c-footer {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        text-align: center;
+    }
+
+    .c-footer-logo {
+        width: 180px;
+    }
+
+    .c-footer-qrcode {
+        width: 200px;
+    }
+}
+
+/*超宽屏幕版*/
+@media only screen and (min-width: 1440px) {
+    /*主页logo*/
+    .c-main-logo {
+        width: 45% !important;
+    }
+}
